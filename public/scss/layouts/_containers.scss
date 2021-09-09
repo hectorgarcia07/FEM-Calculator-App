@@ -1,0 +1,16 @@
+.calc-container {
+  max-width: 375px;
+  padding: 1.5em;
+  background-color: var(--main-background);
+}
+
+.calc-header-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc-theme-btns-container {
+  display: flex;
+  align-items: flex-end;
+}
