@@ -15,26 +15,57 @@
     <main class="calc-container">
       <section class="calc-header-container">
         <div class="calc-title">calc</div>
+        <div class="theme-title">THEME</div>
         <fieldset class="calc-theme-btns-container">
+          <div class="theme-headers">
+            <span class="theme-header-label">1</span>
+            <span class="theme-header-label">2</span>
+            <span class="theme-header-label">3</span>
+          </div>
           <!-- <legend>THEME</legend> -->
           <div class="theme-switches">
-            <input id="theme-one" type="radio" name="theme" class="theme-btn">
-            <label for="theme-one"></label>
+            <label for="theme-one" class="radio-label">
+              <input id="theme-one" type="radio" name="theme" class="theme-btn" checked="checked">
+              <span class="checkmark"></span>
+            </label>
             
-            <input id="theme-two" type="radio" name="theme" class="theme-btn">
-            <label for="theme-two"></label>
+            <label for="theme-two" class="radio-label">
+              <input id="theme-two" type="radio" name="theme" class="theme-btn-one">
+              <span class="checkmark"></span>
+            </label>
             
-            <input id="theme-three" type="radio" name="theme" class="theme-btn">
-            <label for="theme-three"></label>
-            
+            <label for="theme-three" class="radio-label">
+              <input id="theme-three" type="radio" name="theme" class="theme-btn">
+              <span class="checkmark"></span>
+            </label>
           </div>
         </fieldset>
       </section>
       <section class="calc-screen">
-
+        <input type="text" class="screen-input" name="numbers" id="screen-input" value="399,981">
       </section>
       <section class="calc-btns-container">
-
+        <div class="btn-keys">
+          <div class="btn-key">7</div>
+          <div class="btn-key">8</div>
+          <div class="btn-key">9</div>
+          <div class="btn-key action-key">DEL</div>
+          <div class="btn-key">4</div>
+          <div class="btn-key">5</div>
+          <div class="btn-key">6</div>
+          <div class="btn-key">+</div>
+          <div class="btn-key">1</div>
+          <div class="btn-key">2</div>
+          <div class="btn-key">3</div>
+          <div class="btn-key">-</div>
+          <div class="btn-key">.</div>
+          <div class="btn-key">0</div>
+          <div class="btn-key">/</div>
+          <div class="btn-key">x</div>
+          <div class="action-key">RESET</div>
+          <div class="equal-key">=</div>
+          <div></div>
+        </div>
       </section>
     </main>
     <script src="public/js/script.js"></script>

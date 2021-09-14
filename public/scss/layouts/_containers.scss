@@ -5,12 +5,29 @@
 }
 
 .calc-header-container {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
 }
 
 .calc-theme-btns-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-screen {
+  margin-top: 2.3em;
+}
+
+.calc-btns-container {
+  background-color: var(--keypad-bg);
+  margin-top: 1.5em;
+  padding: 1em;
+}
+
+.btn-keys {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }

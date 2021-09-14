@@ -1,5 +1,5 @@
 :root[data-theme=theme-one] {
-  --main-background: #3a4764;
+  --main-background: hsl(222, 26%, 31%);
   --toggle-bg: hsl(223, 31%, 20%);
   --keypad-bg: hsl(223, 31%, 20%);
   --screen-bg: hsl(224, 36%, 15%);
@@ -50,57 +50,94 @@
 }
 
 .theme-switches {
-  border-radius: 50px;
-  padding: 0.15em 0.1em;
-  background-color: var(--toggle-bg);
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--toggle-bg);
+  border-radius: 20px;
+  padding: 1px;
 }
 
-input[type=radio] + label {
+.screen-input {
+  background-color: var(--screen-bg);
+  padding: 0.5em 0.6em 0.75em 0.3em;
+  width: 100%;
+  border: none;
+  text-align: right;
+  color: var(--text-color);
+  font-size: 2.3rem;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.btn-key {
+  text-align: center;
+  background-color: var(--key-secondary-bg);
+  border-bottom: 3px solid var(--key-secondary-shadow);
+  font-size: 2rem;
+  padding: 0.4em;
+  color: var(--key-secondary-text-color);
+}
+
+.radio-label {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  display: inline-block;
-  cursor: pointer;
 }
-input[type=radio] + label::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 17px;
-  height: 16px;
-  border-radius: 50%;
-  background: transparent;
+
+.radio-label input {
+  opacity: 0;
 }
-input[type=radio] + label::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 17px;
-  height: 16px;
-  border-radius: 50%;
-}
-input[type=radio]:checked + label::after {
+
+.radio-label .checkmark {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
   background-color: var(--toggle-key-bg);
-}
-
-input[type=radio]:focus + label::before {
-  box-shadow: 0 0px 3px #fda1a1;
-}
-
-input[type=radio] {
-  /*   opacity: 0;
-  */
-}
-input[type=radio] + label {
-  position: relative;
+  border-radius: 50%;
   display: inline-block;
-  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  margin: auto;
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.radio-label input:checked + .checkmark {
+  display: inline-block;
+  opacity: 1;
+}
+
+.radio-label input:focus + .checkmark {
+  box-shadow: 0 0px 8px white;
+}
+
+.theme-header-label {
+  color: var(--toggle-key-text);
+  font-size: 12px;
 }
 
 .calc-title {
   color: var(--text-color);
-  font-family: "Spartan", sans-serif;
   font-size: 2rem;
   padding-top: 0.2em;
+}
+
+.theme-headers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.theme-title {
+  color: var(--text-color);
+  align-self: flex-end;
+  margin-left: 7em;
+  font-size: 13px;
 }
 
 .calc-container {
@@ -110,14 +147,31 @@ input[type=radio] + label {
 }
 
 .calc-header-container {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
 }
 
 .calc-theme-btns-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-screen {
+  margin-top: 2.3em;
+}
+
+.calc-btns-container {
+  background-color: var(--keypad-bg);
+  margin-top: 1.5em;
+  padding: 1em;
+}
+
+.btn-keys {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }
 
 html {
@@ -140,4 +194,10 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: "Spartan", sans-serif;
+}
+
+input[type=radio] {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=styles.css.map */

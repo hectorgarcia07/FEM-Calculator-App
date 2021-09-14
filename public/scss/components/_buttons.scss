@@ -1,51 +1,8 @@
-input[type="radio"] {
-  + label {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-
-      width: 17px;
-      height: 16px;
-      border-radius: 50%;
-      background: transparent;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-
-      width: 17px;
-      height: 16px;
-      border-radius: 50%;
-    }
-  }
-  &:checked {
-    + label::after {
-      background-color: var(--toggle-key-bg);
-    }
-  }
-}
-
-input[type="radio"] {
-  &:focus {
-    + label::before {
-      box-shadow: 0 0px 3px rgb(253, 161, 161);
-    }
-  }
-}
-
-input[type="radio"] {
-  /*   opacity: 0;
- */
-  + label {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
+.btn-key {
+  text-align: center;
+  background-color: var(--key-secondary-bg);
+  border-bottom: 3px solid var(--key-secondary-shadow);
+  font-size: 2rem;
+  padding: 0.4em;
+  color: var(--key-secondary-text-color);
 }
