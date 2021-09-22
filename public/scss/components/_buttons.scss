@@ -1,8 +1,31 @@
 .btn-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: var(--key-secondary-bg);
-  border-bottom: 3px solid var(--key-secondary-shadow);
-  font-size: 2rem;
-  padding: 0.4em;
+  border-bottom: 4px solid var(--key-secondary-shadow);
+  font-size: 1.8rem;
+  padding: 0.42em;
   color: var(--key-secondary-text-color);
+  border-radius: 4px;
+}
+
+.action-key {
+  font-size: 1rem;
+  color: var(--toggle-key-text);
+  background-color: var(--key-primary);
+  border-bottom: 4px solid var(--key-primary-shadow);
+}
+
+.grid-span {
+  grid-column: 1 /3;
+}
+
+.equal-key {
+  grid-column: 4;
+  font-size: 1rem;
+  background-color: var(--toggle-key-bg);
+  border-bottom: 4px solid var(--toggle-key-shadow);
+  color: var(--toggle-key-text);
 }
