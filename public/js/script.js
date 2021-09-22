@@ -1,4 +1,11 @@
 const html = document.querySelector('html');
 html.dataset.theme = `theme-one`;
 
-console.log(html)
+function switchTheme(theme) {
+  html.dataset.theme = `theme-${theme}`;
+  console.log(theme)
+}
+
+
+
+console.log('sa')

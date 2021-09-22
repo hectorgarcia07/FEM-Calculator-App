@@ -29,17 +29,17 @@
           <div class="theme-switches">
             <label for="theme-one" class="radio-label">
               <input id="theme-one" type="radio" name="theme" class="theme-btn" checked="checked">
-              <span class="checkmark"></span>
+              <span class="checkmark" onClick="switchTheme('one')"></span>
             </label>
             
             <label for="theme-two" class="radio-label">
               <input id="theme-two" type="radio" name="theme" class="theme-btn-one">
-              <span class="checkmark"></span>
+              <span class="checkmark" onClick="switchTheme('two')"></span>
             </label>
             
             <label for="theme-three" class="radio-label">
               <input id="theme-three" type="radio" name="theme" class="theme-btn">
-              <span class="checkmark"></span>
+              <span class="checkmark" onClick="switchTheme('three')"></span>
             </label>
           </div>
         </fieldset>
@@ -67,7 +67,6 @@
           <div class="btn-key">x</div>
           <div class="btn-key action-key grid-span">RESET</div>
           <div class="btn-key equal-key grid-span">=</div>
-          <div></div>
         </div>
       </section>
     </main>

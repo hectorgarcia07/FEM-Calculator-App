@@ -32,11 +32,7 @@
   opacity: 1;
 }
 
-.radio-label input:focus + .checkmark {
-  box-shadow: 0 0px 8px white;
-}
-
 .theme-header-label {
-  color: var(--toggle-key-text);
+  color: var(--text-color);
   font-size: 12px;
 }
