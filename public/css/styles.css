@@ -135,6 +135,10 @@
   opacity: 1;
 }
 
+input:focus + .checkmark {
+  border: 4px solid var(--text-color);
+}
+
 .theme-header-label {
   color: var(--text-color);
   font-size: 12px;
