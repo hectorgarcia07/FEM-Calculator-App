@@ -1,11 +1,18 @@
 .screen-input {
-  background-color: var(--screen-bg);
-  padding: 0.5em 0.6em 0.75em 0.3em;
+  background-color: transparent;
+  padding: 0.5em 0.6em 0 0.3em;
   width: 100%;
   border: none;
   text-align: right;
   color: var(--text-color);
   font-size: 2.3rem;
   font-weight: 700;
-  border-radius: 10px;
+  overflow: auto;
+}
+
+.mini-display {
+  color: var(--text-color);
+  padding: 0 1.4em 0.3em 0.3em;
+  text-align: right;
+  overflow: auto;
 }

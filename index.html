@@ -28,45 +28,46 @@
           <!-- <legend>THEME</legend> -->
           <div class="theme-switches">
             <label for="theme-one" class="radio-label">
-              <input id="theme-one" type="radio" name="theme" checked="checked">
+              <input id="theme-one" type="radio" name="theme" checked="checked" data-radio="one">
               <span class="checkmark"></span>
             </label>
             
             <label for="theme-two" class="radio-label">
-              <input id="theme-two" type="radio" name="theme">
+              <input id="theme-two" type="radio" name="theme" data-radio="two">
               <span class="checkmark"></span>
             </label>
             
             <label for="theme-three" class="radio-label">
-              <input id="theme-three" type="radio" name="theme">
+              <input id="theme-three" type="radio" name="theme" data-radio="three">
               <span class="checkmark"></span>
             </label>
           </div>
         </fieldset>
       </section>
       <section class="calc-screen">
-        <input type="text" class="screen-input" name="numbers" id="screen-input" value="0">
+        <div class="screen-input" name="numbers" id="screen-input">0</div>
+        <div class="mini-display" id="mini-display">&nbsp;</div>
       </section>
       <section class="calc-btns-container">
         <div class="btn-keys">
-          <div class="btn-key" data-key="7">7</div>
-          <div class="btn-key" data-key="8">8</div>
-          <div class="btn-key" data-key="9">9</div>
-          <div class="btn-key action-key" data-key="del">DEL</div>
-          <div class="btn-key" data-key="4">4</div>
-          <div class="btn-key" data-key="5">5</div>
-          <div class="btn-key" data-key="6">6</div>
-          <div class="btn-key" data-key="+">+</div>
-          <div class="btn-key" data-key="1">1</div>
-          <div class="btn-key" data-key="2">2</div>
-          <div class="btn-key" data-key="3">3</div>
-          <div class="btn-key" data-key="-">-</div>
-          <div class="btn-key" data-key=".">.</div>
-          <div class="btn-key" data-key="0">0</div>
-          <div class="btn-key" data-key="/">/</div>
-          <div class="btn-key" data-key="x">x</div>
-          <div class="btn-key action-key grid-span" data-key="reset">RESET</div>
-          <div class="btn-key equal-key grid-span" data-key="=">=</div>
+          <div class="btn-key" data-digit="7">7</div>
+          <div class="btn-key" data-digit="8">8</div>
+          <div class="btn-key" data-digit="9">9</div>
+          <div class="btn-key action-key" data-delete="del">DEL</div>
+          <div class="btn-key" data-digit="4">4</div>
+          <div class="btn-key" data-digit="5">5</div>
+          <div class="btn-key" data-digit="6">6</div>
+          <div class="btn-key" data-operation="+">+</div>
+          <div class="btn-key" data-digit="1">1</div>
+          <div class="btn-key" data-digit="2">2</div>
+          <div class="btn-key" data-digit="3">3</div>
+          <div class="btn-key" data-operation="-">-</div>
+          <div class="btn-key" data-decimal=".">.</div>
+          <div class="btn-key" data-digit="0">0</div>
+          <div class="btn-key" data-operation="/">/</div>
+          <div class="btn-key" data-operation="*">x</div>
+          <div class="btn-key action-key grid-span" data-reset="reset">RESET</div>
+          <div class="btn-key equal-key grid-span" data-equal="=">=</div>
         </div>
       </section>
     </main>
