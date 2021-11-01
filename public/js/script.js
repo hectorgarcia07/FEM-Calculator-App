@@ -1,6 +1,3 @@
-//case when user enters decimal and they delete it
-
-
 const screenDisplay = document.getElementById('screen-input')
 const miniDisplay = document.getElementById('mini-display')
 const html = document.querySelector('html')
@@ -11,6 +8,8 @@ const deleteKey = document.querySelector('[data-delete]')
 const operationKeys = document.querySelectorAll('[data-operation]')
 const resetKey = document.querySelector('[data-reset]')
 const equalKey = document.querySelector('[data-equal]')
+
+/*  ---      Theme Events        ---*/
 
 //theme one is the default theme
 html.dataset.theme = `theme-one`
@@ -27,7 +26,9 @@ themeSwitcherBtn.forEach( radioBtn => {
     })
 })
 
-//event for all key 0 - 9 click
+/*  ---      Click Events        ---*/
+
+//event for all key 0 - 9 click and on button press
 digitKeys.forEach( digitKey => {
     digitKey.addEventListener('click', event => {
         calculator.updateOperand(digitKey.dataset.digit)
@@ -59,6 +60,31 @@ resetKey.addEventListener('click', event => {
 //calculate's the result
 equalKey.addEventListener('click', event => {
     calculator.equal()
+})
+
+/*  ---      ButtenPress Events        ---*/
+//will check and handle if user entered a number, decimal or operator symbols
+window.addEventListener('keydown', event => {
+    let key = event.key 
+    console.log(key)
+    if(/^\d+$/.test(key)){
+        calculator.updateOperand(event.key)
+    }
+    else if(key == '/' || key == '*' || key == '-' || key == '+'){
+        calculator.operation(key)
+    }
+    else if(key == '.'){
+        calculator.decimal()
+    }
+    else if(key == '=' || key == 'Enter'){
+        calculator.equal()
+    }
+    else if(key == 'Backspace'){
+        calculator.deleteDigit()
+    }
+    else if(key == 'Escape'){
+        calculator.reset()
+    }
 })
 
 //calcuator object that will serve 
@@ -110,6 +136,10 @@ class Calculator {
     //will append a decmial if one hasn't been added yet
     decimal(){
         if(!this.currentOperand.includes('.')){
+            //fixes a bug where adding a decimal on empty currentoperand causes NAN
+            if(this.currentOperand.length == 0){
+                this.currentOperand = '0'
+            }
             this.currentOperand = this.currentOperand + '.'
             this.updateDisplay()
         }
@@ -192,9 +222,6 @@ class Calculator {
     equal(){
         if(this.operator){
             const result = this.compute()
-
-            console.log(result)
-
             this.currentOperand = result.toString()
 
             this.previousOperand = '0'
