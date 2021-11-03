@@ -1,3 +1,9 @@
+@media screen and (min-width: 490px) {
+  .calc-container {
+    max-width: 490px;
+    margin: 0 auto;
+  }
+}
 :root[data-theme=theme-one] {
   --main-background: hsl(222, 26%, 31%);
   --toggle-bg: hsl(223, 31%, 20%);
@@ -13,6 +19,12 @@
   --key-secondary-shadow: hsl(28, 16%, 65%);
   --key-secondary-text-color: hsl(221, 14%, 31%);
   --key-primary-text-color: white;
+  --key-primary-hover: hsl(225, 60%, 74%);
+  --key-secondary-bg-hover: rgb(165, 165, 165);
+  --toggle-key-bg-hover: hsl(6, 77%, 58%);
+  --key-primary-clicked: hsl(225, 58%, 82%);
+  --key-secondary-bg-clicked: rgb(212, 212, 212);
+  --toggle-key-bg-clicked: hsl(6, 83%, 65%);
 }
 
 :root[data-theme=theme-two] {
@@ -30,6 +42,12 @@
   --key-secondary-shadow: hsl(35, 11%, 61%);
   --key-secondary-text-color: hsl(60, 10%, 19%);
   --key-primary-text-color: white;
+  --key-primary-hover: hsl(185, 45%, 55%);
+  --key-secondary-bg-hover: rgb(165, 165, 165);
+  --toggle-key-bg-hover: hsl(25, 78%, 56%);
+  --key-primary-clicked: hsl(185, 70%, 74%);
+  --key-secondary-bg-clicked: rgb(231, 231, 231);
+  --toggle-key-bg-clicked: hsl(25, 84%, 65%);
 }
 
 :root[data-theme=theme-three] {
@@ -47,6 +65,12 @@
   --key-secondary-shadow: hsl(290, 70%, 36%);
   --key-secondary-text-color: hsl(52, 100%, 62%);
   --key-primary-text-color: white;
+  --key-primary-hover: hsl(281, 53%, 46%);
+  --key-secondary-bg-hover: hsl(267, 28%, 41%);
+  --toggle-key-bg-hover: hsl(176, 46%, 56%);
+  --key-primary-clicked: hsl(281, 52%, 61%);
+  --key-secondary-bg-clicked: hsl(267, 24%, 55%);
+  --toggle-key-bg-clicked: hsl(177, 47%, 66%);
 }
 
 .theme-switches {
@@ -85,9 +109,16 @@
   background-color: var(--key-secondary-bg);
   border-bottom: 4px solid var(--key-secondary-shadow);
   font-size: 1.8rem;
-  padding: 0.42em;
+  padding: 0.42em 0;
   color: var(--key-secondary-text-color);
   border-radius: 4px;
+  cursor: pointer;
+}
+.btn-key:hover {
+  background-color: var(--key-secondary-bg-hover);
+}
+.btn-key:active {
+  background-color: var(--key-secondary-bg-clicked);
 }
 
 .action-key {
@@ -95,6 +126,12 @@
   color: var(--key-primary-text-color);
   background-color: var(--key-primary);
   border-bottom: 4px solid var(--key-primary-shadow);
+}
+.action-key:hover {
+  background-color: var(--key-primary-hover);
+}
+.action-key:active {
+  background-color: var(--key-primary-clicked);
 }
 
 .grid-span {
@@ -106,6 +143,12 @@
   background-color: var(--toggle-key-bg);
   border-bottom: 4px solid var(--toggle-key-shadow);
   color: var(--toggle-key-text);
+}
+.equal-key:hover {
+  background-color: var(--toggle-key-bg-hover);
+}
+.equal-key:active {
+  background-color: var(--toggle-key-bg-clicked);
 }
 
 .radio-label {
@@ -165,14 +208,13 @@ input:focus + .checkmark {
 .theme-title {
   color: var(--text-color);
   align-self: flex-end;
-  margin-left: 7em;
+  margin-left: auto;
   font-size: 13px;
+  padding-right: 2em;
 }
 
 .calc-container {
-  max-width: 375px;
   padding: 1.5em;
-  background-color: var(--main-background);
 }
 
 .calc-header-container {
@@ -228,6 +270,7 @@ body {
   font-size: 16px;
   font-family: "Spartan", sans-serif;
   font-weight: 700;
+  background-color: var(--main-background);
 }
 
 input[type=radio] {

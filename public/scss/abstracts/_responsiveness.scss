@@ -1,0 +1,13 @@
+@mixin median-md {
+  @media screen and (min-width: 490px) {
+    @content;
+  }
+}
+
+//fixes the width and centers the calculator to the screen
+@include median-md {
+  .calc-container {
+    max-width: 490px;
+    margin: 0 auto;
+  }
+}

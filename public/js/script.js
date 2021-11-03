@@ -66,7 +66,7 @@ equalKey.addEventListener('click', event => {
 //will check and handle if user entered a number, decimal or operator symbols
 window.addEventListener('keydown', event => {
     let key = event.key 
-    console.log(key)
+
     if(/^\d+$/.test(key)){
         calculator.updateOperand(event.key)
     }
@@ -235,3 +235,9 @@ class Calculator {
 }
 
 const calculator = new Calculator()
+
+/*
+todo 
+fix bug where on refresh, user theme option doesn't load.
+make automatically load users borwser them on the calculator
+*/

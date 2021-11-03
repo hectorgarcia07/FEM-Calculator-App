@@ -6,9 +6,17 @@
   background-color: var(--key-secondary-bg);
   border-bottom: 4px solid var(--key-secondary-shadow);
   font-size: 1.8rem;
-  padding: 0.42em;
+  padding: 0.42em 0;
   color: var(--key-secondary-text-color);
   border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--key-secondary-bg-hover);
+  }
+  &:active {
+    background-color: var(--key-secondary-bg-clicked);
+  }
 }
 
 .action-key {
@@ -16,6 +24,13 @@
   color: var(--key-primary-text-color);
   background-color: var(--key-primary);
   border-bottom: 4px solid var(--key-primary-shadow);
+
+  &:hover {
+    background-color: var(--key-primary-hover);
+  }
+  &:active {
+    background-color: var(--key-primary-clicked);
+  }
 }
 
 .grid-span {
@@ -27,4 +42,11 @@
   background-color: var(--toggle-key-bg);
   border-bottom: 4px solid var(--toggle-key-shadow);
   color: var(--toggle-key-text);
+
+  &:hover {
+    background-color: var(--toggle-key-bg-hover);
+  }
+  &:active {
+    background-color: var(--toggle-key-bg-clicked);
+  }
 }

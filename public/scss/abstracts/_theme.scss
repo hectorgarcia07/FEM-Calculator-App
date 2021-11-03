@@ -15,6 +15,14 @@
 
   --key-secondary-text-color: hsl(221, 14%, 31%);
   --key-primary-text-color: white;
+
+  --key-primary-hover: hsl(225, 60%, 74%);
+  --key-secondary-bg-hover: rgb(165, 165, 165);
+  --toggle-key-bg-hover: hsl(6, 77%, 58%);
+
+  --key-primary-clicked: hsl(225, 58%, 82%);
+  --key-secondary-bg-clicked: rgb(212, 212, 212);
+  --toggle-key-bg-clicked: hsl(6, 83%, 65%);
 }
 
 :root[data-theme="theme-two"] {
@@ -34,6 +42,14 @@
 
   --key-secondary-text-color: hsl(60, 10%, 19%);
   --key-primary-text-color: white;
+
+  --key-primary-hover: hsl(185, 45%, 55%);
+  --key-secondary-bg-hover: rgb(165, 165, 165);
+  --toggle-key-bg-hover: hsl(25, 78%, 56%);
+
+  --key-primary-clicked: hsl(185, 70%, 74%);
+  --key-secondary-bg-clicked: rgb(231, 231, 231);
+  --toggle-key-bg-clicked: hsl(25, 84%, 65%);
 }
 
 :root[data-theme="theme-three"] {
@@ -53,4 +69,12 @@
 
   --key-secondary-text-color: hsl(52, 100%, 62%);
   --key-primary-text-color: white;
+
+  --key-primary-hover: hsl(281, 53%, 46%);
+  --key-secondary-bg-hover: hsl(267, 28%, 41%);
+  --toggle-key-bg-hover: hsl(176, 46%, 56%);
+
+  --key-primary-clicked: hsl(281, 52%, 61%);
+  --key-secondary-bg-clicked: hsl(267, 24%, 55%);
+  --toggle-key-bg-clicked: hsl(177, 47%, 66%);
 }
