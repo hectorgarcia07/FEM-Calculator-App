@@ -10,13 +10,27 @@ const resetKey = document.querySelector('[data-reset]')
 const equalKey = document.querySelector('[data-equal]')
 
 /*  ---      Theme Events        ---*/
+//Sets the default theme based on where the theme is check 
+if(localStorage.getItem('themeCalculator')){
+    switchTheme(localStorage.getItem('themeCalculator'))
 
-//theme one is the default theme
-html.dataset.theme = `theme-one`
+    //make appropriate radio button is checked
+    themeSwitcherBtn[localStorage.getItem('themeCalculator')].checked = true
+}
+else{
+    for(radioBtn of themeSwitcherBtn){
+        if(radioBtn.checked){
+            switchTheme(radioBtn.dataset.radio)
+            break;
+        }
+    }
+}
 
 //switches the theme based on given parameter
 function switchTheme(theme) {
-  html.dataset.theme = `theme-${theme}`
+    //set saved theme to localstorage
+    localStorage.setItem('themeCalculator', theme)
+    html.dataset.theme = `theme-${theme}`
 }
 
 //for each radio button switch the theme to its respective active state
@@ -84,6 +98,60 @@ window.addEventListener('keydown', event => {
     }
     else if(key == 'Escape'){
         calculator.reset()
+    }
+})
+
+//will be used to set change color of a key when it's pressed on a keyboard
+window.addEventListener('keydown', event => {
+    event.preventDefault()
+    let key = event.key
+
+    //if the key is a number, change the color
+    if(/^\d+$/.test(key)){
+        const keyDom = document.querySelector(`[data-digit="${key}"]`)
+        keyDom.classList.add("active-secondary")
+    }
+    else if(key == '.'){
+        const keyDom = document.querySelector(`[data-decimal]`)
+        keyDom.classList.add("active-secondary")
+    }
+    else if(key == '/' || key == '*' || key == '-' || key == '+'){
+        const keyDom = document.querySelector(`[data-operation="${key}"]`)
+        keyDom.classList.add("active-secondary")
+    }
+    else if(key == "Backspace" || key == "Escape"){
+        const keyDom = document.querySelector(`[data-${key == 'Backspace' ? 'delete' : 'reset'}]`)
+        keyDom.classList.add("active-primary")
+    }
+    else if(key == '='){
+        const keyDom = document.querySelector(`[data-equal]`)
+        keyDom.classList.add("active-equal")
+    }
+})
+
+window.addEventListener('keyup', event => {
+    let key = event.key
+    console.log(key)
+    //WHen user released key, then change it back to normal
+    if(/^\d+$/.test(key)){
+        const keyDom = document.querySelector(`[data-digit="${key}"]`)
+        keyDom.classList.remove("active-secondary")
+    }
+    else if(key == '.'){
+        const keyDom = document.querySelector(`[data-decimal]`)
+        keyDom.classList.remove("active-secondary")
+    }
+    else if(key == '/' || key == '*' || key == '-' || key == '+'){
+        const keyDom = document.querySelector(`[data-operation="${key}"]`)
+        keyDom.classList.remove("active-secondary")
+    }
+    else if(key == "Backspace" || key == "Escape"){
+        const keyDom = document.querySelector(`[data-${key == 'Backspace' ? 'delete' : 'reset'}]`)
+        keyDom.classList.remove("active-primary")
+    }
+    else if(key == '='){
+        const keyDom = document.querySelector(`[data-equal]`)
+        keyDom.classList.remove("active-equal")
     }
 })
 
@@ -238,6 +306,5 @@ const calculator = new Calculator()
 
 /*
 todo 
-fix bug where on refresh, user theme option doesn't load.
-make automatically load users borwser them on the calculator
+Fix bug where division key triggers quickfind
 */

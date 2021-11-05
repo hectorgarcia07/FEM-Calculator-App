@@ -1,4 +1,4 @@
-:root[data-theme="theme-one"] {
+:root[data-theme="theme-0"] {
   --main-background: hsl(222, 26%, 31%);
   --toggle-bg: hsl(223, 31%, 20%);
   --keypad-bg: hsl(223, 31%, 20%);
@@ -25,7 +25,7 @@
   --toggle-key-bg-clicked: hsl(6, 83%, 65%);
 }
 
-:root[data-theme="theme-two"] {
+:root[data-theme="theme-1"] {
   --main-background: hsl(0, 0%, 90%);
   --toggle-bg: hsl(0, 5%, 81%);
   --keypad-bg: hsl(0, 5%, 81%);
@@ -52,7 +52,7 @@
   --toggle-key-bg-clicked: hsl(25, 84%, 65%);
 }
 
-:root[data-theme="theme-three"] {
+:root[data-theme="theme-2"] {
   --main-background: hsl(268, 75%, 9%);
   --toggle-bg: hsl(268, 71%, 12%);
   --keypad-bg: hsl(268, 71%, 12%);

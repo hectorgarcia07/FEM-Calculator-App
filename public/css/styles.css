@@ -4,7 +4,7 @@
     margin: 0 auto;
   }
 }
-:root[data-theme=theme-one] {
+:root[data-theme=theme-0] {
   --main-background: hsl(222, 26%, 31%);
   --toggle-bg: hsl(223, 31%, 20%);
   --keypad-bg: hsl(223, 31%, 20%);
@@ -27,7 +27,7 @@
   --toggle-key-bg-clicked: hsl(6, 83%, 65%);
 }
 
-:root[data-theme=theme-two] {
+:root[data-theme=theme-1] {
   --main-background: hsl(0, 0%, 90%);
   --toggle-bg: hsl(0, 5%, 81%);
   --keypad-bg: hsl(0, 5%, 81%);
@@ -50,7 +50,7 @@
   --toggle-key-bg-clicked: hsl(25, 84%, 65%);
 }
 
-:root[data-theme=theme-three] {
+:root[data-theme=theme-2] {
   --main-background: hsl(268, 75%, 9%);
   --toggle-bg: hsl(268, 71%, 12%);
   --keypad-bg: hsl(268, 71%, 12%);
@@ -106,13 +106,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--key-secondary-bg);
   border-bottom: 4px solid var(--key-secondary-shadow);
   font-size: 1.8rem;
   padding: 0.42em 0;
   color: var(--key-secondary-text-color);
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--key-secondary-bg);
 }
 .btn-key:hover {
   background-color: var(--key-secondary-bg-hover);
@@ -124,8 +124,8 @@
 .action-key {
   font-size: 1rem;
   color: var(--key-primary-text-color);
-  background-color: var(--key-primary);
   border-bottom: 4px solid var(--key-primary-shadow);
+  background-color: var(--key-primary);
 }
 .action-key:hover {
   background-color: var(--key-primary-hover);
@@ -149,6 +149,18 @@
 }
 .equal-key:active {
   background-color: var(--toggle-key-bg-clicked);
+}
+
+.active-secondary {
+  background-color: var(--key-secondary-bg-hover);
+}
+
+.active-primary {
+  background-color: var(--key-primary-hover);
+}
+
+.active-equal {
+  background-color: var(--toggle-key-bg-hover);
 }
 
 .radio-label {

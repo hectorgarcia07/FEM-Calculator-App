@@ -1,18 +1,30 @@
+@mixin active-secondary-mixin {
+  background-color: var(--key-secondary-bg-hover);
+}
+
+@mixin active-primary-mixin {
+  background-color: var(--key-primary-hover);
+}
+
+@mixin active-equal-mixin {
+  background-color: var(--toggle-key-bg-hover);
+}
+
 .btn-key {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--key-secondary-bg);
   border-bottom: 4px solid var(--key-secondary-shadow);
   font-size: 1.8rem;
   padding: 0.42em 0;
   color: var(--key-secondary-text-color);
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--key-secondary-bg);
 
   &:hover {
-    background-color: var(--key-secondary-bg-hover);
+    @include active-secondary-mixin;
   }
   &:active {
     background-color: var(--key-secondary-bg-clicked);
@@ -22,11 +34,11 @@
 .action-key {
   font-size: 1rem;
   color: var(--key-primary-text-color);
-  background-color: var(--key-primary);
   border-bottom: 4px solid var(--key-primary-shadow);
+  background-color: var(--key-primary);
 
   &:hover {
-    background-color: var(--key-primary-hover);
+    @include active-primary-mixin();
   }
   &:active {
     background-color: var(--key-primary-clicked);
@@ -44,9 +56,21 @@
   color: var(--toggle-key-text);
 
   &:hover {
-    background-color: var(--toggle-key-bg-hover);
+    @include active-equal-mixin;
   }
   &:active {
     background-color: var(--toggle-key-bg-clicked);
   }
+}
+
+.active-secondary {
+  @include active-secondary-mixin;
+}
+
+.active-primary {
+  @include active-primary-mixin;
+}
+
+.active-equal {
+  @include active-equal-mixin;
 }
