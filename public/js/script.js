@@ -103,7 +103,6 @@ window.addEventListener('keydown', event => {
 
 //will be used to set change color of a key when it's pressed on a keyboard
 window.addEventListener('keydown', event => {
-    event.preventDefault()
     let key = event.key
 
     //if the key is a number, change the color
@@ -116,6 +115,7 @@ window.addEventListener('keydown', event => {
         keyDom.classList.add("active-secondary")
     }
     else if(key == '/' || key == '*' || key == '-' || key == '+'){
+        event.preventDefault()
         const keyDom = document.querySelector(`[data-operation="${key}"]`)
         keyDom.classList.add("active-secondary")
     }
