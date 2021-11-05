@@ -303,8 +303,3 @@ class Calculator {
 }
 
 const calculator = new Calculator()
-
-/*
-todo 
-Fix bug where division key triggers quickfind
-*/
