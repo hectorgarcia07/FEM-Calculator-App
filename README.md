@@ -66,7 +66,7 @@ practice my SCSS.
 
 - [How to structure SASS](https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/) - As the title mentions, I found it a bit overwhelming trying to figure out how to structure several SASS files and this source helped me out.
 
-- [How to switch themes](https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133) - I was wondering a theme switcher would work and this article provided a good explenation on how to do it and also how to save the users theme on localstorage.
+- [How to switch themes](https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133) - I was wondering how a theme switcher would work and this article provided a good explenation on how to do it and also how to save the users theme on localstorage.
 
 ## Author
 
