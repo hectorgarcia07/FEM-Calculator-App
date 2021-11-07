@@ -138,7 +138,7 @@ window.addEventListener('keyup', event => {
         const keyDom = document.querySelector(`[data-${key == 'Backspace' ? 'delete' : 'reset'}]`)
         keyDom.classList.remove("active-primary")
     }
-    else if(key == '='){
+    else if(key == '=' || key == 'Enter'){
         const keyDom = document.querySelector(`[data-equal]`)
         keyDom.classList.remove("active-equal")
     }
